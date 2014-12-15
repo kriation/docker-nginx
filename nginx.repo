@@ -1,0 +1,7 @@
+# nginx Mainline repository list
+[nginx]
+name = nginx
+baseurl = http://nginx.org/packages/mainline/centos/7/$basearch/
+# nginx public signing key is listed here: http://nginx.org/en/pgp_keys.html
+gpgkey = http://nginx.org/keys/nginx_signing.key
+gpgcheck = 1
