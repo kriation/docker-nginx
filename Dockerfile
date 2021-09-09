@@ -11,7 +11,7 @@ LABEL org.opencontainers.image.vendor=""
 COPY nginx.repo /etc/yum.repos.d/
 
 # Install nginx and dependencies (e.g. make, openssl)
-RUN yum -y install nginx && yum -y clean all
+RUN yum -y install nginx && yum -y clean packages
 
 # Secure installation
 RUN chown -R nginx:nginx /etc/nginx/ /usr/share/nginx/ \ 
