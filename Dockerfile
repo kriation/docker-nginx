@@ -13,6 +13,6 @@ COPY nginx.repo /etc/yum.repos.d/
 # Install nginx and dependencies (e.g. make, openssl)
 RUN yum -y install nginx && yum -y clean packages
 
-# Secure installation
-RUN chown -R nginx:nginx /etc/nginx/ /usr/share/nginx/ \ 
-	/var/cache/nginx/ /var/log/nginx/
+# Adjust ownership of specific directories
+RUN chown -R nginx:nginx /etc/nginx /usr/share/nginx \
+      /var/cache/nginx /var/log/nginx
