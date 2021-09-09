@@ -1,6 +1,11 @@
 FROM kriation/centos7
+LABEL maintainer="armen@kriation.com"
 
-MAINTAINER Armen Kaleshian <armen@kriation.com>
+ARG BUILD_DATE
+LABEL org.label-schema.build-date=$BUILD_DATE
+LABEL org.label-schema.vendor=""
+LABEL org.opencontainers.image.created=$BUILD_DATE
+LABEL org.opencontainers.image.vendor=""
 
 # Copy repo file
 COPY nginx.repo /etc/yum.repos.d/
